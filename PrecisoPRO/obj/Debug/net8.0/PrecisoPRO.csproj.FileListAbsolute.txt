@@ -36,7 +36,6 @@ C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\Microsoft.E
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
@@ -209,15 +208,11 @@ C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\ru\Microsof
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
-C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
-C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\obj\Debug\net8.0\PrecisoPRO.csproj.AssemblyReference.cache
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\obj\Debug\net8.0\PrecisoPRO.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\obj\Debug\net8.0\PrecisoPRO.AssemblyInfoInputs.cache
@@ -242,3 +237,12 @@ C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\obj\Debug\net8.0\refint\Prec
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\obj\Debug\net8.0\PrecisoPRO.pdb
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\obj\Debug\net8.0\PrecisoPRO.genruntimeconfig.cache
 C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\obj\Debug\net8.0\ref\PrecisoPRO.dll
+C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\CloudinaryDotNet.dll
+C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\obj\Debug\net8.0\PrecisoPRO.sourcelink.json
+C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\PagedList.dll
+C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\PagedList.Mvc.dll
+C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\preciso\source\repos\PrecisoPRO\PrecisoPRO\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

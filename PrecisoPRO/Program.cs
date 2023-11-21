@@ -1,10 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using PrecisoPRO.Data;
+using PrecisoPRO.Helpers;
+using PrecisoPRO.Interfaces;
+using PrecisoPRO.Repository;
+using PrecisoPRO.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+
+
+builder.Services.AddScoped<IPhotoService, PhotoService>();
+
+
+
+builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 
 
 //Conexão
