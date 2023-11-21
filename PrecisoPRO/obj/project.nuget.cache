@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5skMVc0Bwp0v/G/mcrKkE0ttuO/N8q4lSmm8cHb1ZnbvMOC69+euSEd7dwWjVbLm25MXZLdJv1M8dhmaGaX7/w==",
+  "dgSpecHash": "1hvpwp0jxHPldjJw9uHoVnh9VOqhJodFXmbGRahTQAqxZP6SFY/o0/98mSS85jPjBchDtD6krc8B1gVsPT51Xg==",
   "success": true,
   "projectFilePath": "C:\\Users\\preciso\\source\\repos\\PrecisoPRO\\PrecisoPRO\\PrecisoPRO.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\preciso\\.nuget\\packages\\bootstrap\\5.3.2\\bootstrap.5.3.2.nupkg.sha512",
     "C:\\Users\\preciso\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\preciso\\.nuget\\packages\\cloudinarydotnet\\1.23.0\\cloudinarydotnet.1.23.0.nupkg.sha512",
     "C:\\Users\\preciso\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
