@@ -1,0 +1,49 @@
+﻿.prn-font-icones-c{
+    font-size:1.2rem;
+    color:steelblue;
+}
+
+.prn-font-icones-e {
+    font-size: 1.2rem;
+    color:red;
+}
+.prn-button-b {
+    font-size: 1.2rem;
+    color: dodgerblue;
+}
+.prn-button-g {
+    font-size: 1.2rem;
+    color: mediumseagreen;
+}
+.prn-button-r {
+    font-size: 1.2rem;
+    color: darkred;
+}
+.pagination > li {
+    border: 1px solid #ccc;
+    text-decoration: none;
+    padding: 5px 12px 5px 12px;
+   
+}
+.pagination > li > a{
+  
+    text-decoration: none;
+    
+}
+
+.pagination > .PagedList-skipToPrevious {
+    border-top-left-radius: 10px;
+    border-right: none;
+    border-bottom-left-radius: 10px;
+}
+
+.pagination > .PagedList-skipToNext {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  
+    border-left: none;
+}
+.pagination > .active {
+    background-color: steelblue;
+    color:#fff;
+}

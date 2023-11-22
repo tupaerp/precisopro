@@ -1,0 +1,53 @@
+﻿<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Razão</th>
+            <th scope="col">Fantasia</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Estado</th>
+            <th class="text-center" scope="col">Ativo</th>
+            <th class="text-center" scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Razao</td>
+                <td>@item.Fantasia</td>
+                <td>@item.Cidade</td>
+                <td>@item.UF</td>
+                @if(item.Status == 1)
+                {
+                    <td class="text-center">
+                        <i class="fa-solid fa-face-smile prn-font-icones-c"></i>
+                    </td>
+                }
+                else
+                {
+                    <td class="text-center">
+                        <i class="fa-solid fa-face-sad-tear prn-font-icones-e"></i>
+                    </td>
+                }
+              
+                <td class="prn-border-table" style="text-align: center;">
+                    <button data-toggle="tooltip" data-placement="left" data-title="Alterar Registro" style="border:none; background-color: transparent;" class="prn-button-b" data-value="@item.Id" onclick="chamarEdit(@item.Id,false)"><i class="fas fa-edit p-1"></i></button>
+                    <button data-toggle="tooltip" data-placement="left" data-title="Visualizar Registro" style="border:none; background-color: transparent;" class="prn-button-g" data-value="@item.Id" onclick="chamarDetails(@item.Id,false)"><i class="fas fa-eye p-1"></i> </button>
+                    <button data-toggle="tooltip" data-placement="left" data-title="Apagar Registro" style="border:none; background-color: transparent;" class="prn-button-r" data-value="@item.Id" onclick="chamarDelete(@item.Id,false)"><i class="fas fa-trash-alt p-1"></i> </button>
+                </td>
+
+
+
+            </tr>
+
+
+        }
+
+
+
+
+    </tbody>
+</table>
