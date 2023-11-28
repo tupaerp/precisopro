@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/dev_paulo.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/PrecisoPRO.styles.css" asp-append-version="true" />
+  @*   <link rel="stylesheet" href="~/PrecisoPRO.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
     <header>
@@ -33,13 +33,14 @@
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-center">
         <div class="container">
             &copy; 2023 - PrecisoPRO - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
@@ -47,6 +48,15 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--Ativar dicas-->
+    <script>
+        $(function () {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            // $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

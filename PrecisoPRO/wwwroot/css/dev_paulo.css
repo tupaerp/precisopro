@@ -1,24 +1,4 @@
-﻿.prn-font-icones-c{
-    font-size:1.2rem;
-    color:steelblue;
-}
-
-.prn-font-icones-e {
-    font-size: 1.2rem;
-    color:red;
-}
-.prn-button-b {
-    font-size: 1.2rem;
-    color: dodgerblue;
-}
-.prn-button-g {
-    font-size: 1.2rem;
-    color: mediumseagreen;
-}
-.prn-button-r {
-    font-size: 1.2rem;
-    color: darkred;
-}
+﻿
 .pagination > li {
     border: 1px solid #ccc;
     text-decoration: none;
@@ -46,4 +26,14 @@
 .pagination > .active {
     background-color: steelblue;
     color:#fff;
+}
+
+
+.page-item:hover a{
+    background-color: steelblue;
+    color: #fff !important;
+}
+.page-item:hover{
+    background-color: steelblue;
+    color: #fff !important;
 }
