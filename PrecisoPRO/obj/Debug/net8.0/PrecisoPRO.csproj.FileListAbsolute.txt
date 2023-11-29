@@ -256,6 +256,8 @@ C:\Users\PRECISO\source\repos\tupaerp\precisopro\PrecisoPRO\bin\Debug\net8.0\Hum
 C:\Users\PRECISO\source\repos\tupaerp\precisopro\PrecisoPRO\bin\Debug\net8.0\K4os.Compression.LZ4.dll
 C:\Users\PRECISO\source\repos\tupaerp\precisopro\PrecisoPRO\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
 C:\Users\PRECISO\source\repos\tupaerp\precisopro\PrecisoPRO\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\PRECISO\source\repos\tupaerp\precisopro\PrecisoPRO\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+C:\Users\PRECISO\source\repos\tupaerp\precisopro\PrecisoPRO\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
 C:\Users\PRECISO\source\repos\tupaerp\precisopro\PrecisoPRO\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\PRECISO\source\repos\tupaerp\precisopro\PrecisoPRO\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\PRECISO\source\repos\tupaerp\precisopro\PrecisoPRO\bin\Debug\net8.0\Microsoft.Build.dll

@@ -181,6 +181,14 @@
       "PackagePath": "staticwebassets\\PrecisoPRO.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\css\\CSS-layout.css",
+      "PackagePath": "staticwebassets\\css\\CSS-layout.css"
+    },
+    {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\css\\CSS-login.css",
+      "PackagePath": "staticwebassets\\css\\CSS-login.css"
+    },
+    {
       "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -193,8 +201,40 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\IMG\\LOCK 2.png",
+      "PackagePath": "staticwebassets\\lib\\IMG\\LOCK 2.png"
+    },
+    {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\IMG\\LOCK.png",
+      "PackagePath": "staticwebassets\\lib\\IMG\\LOCK.png"
+    },
+    {
       "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\IMG\\LOGO TOP.png",
       "PackagePath": "staticwebassets\\lib\\IMG\\LOGO TOP.png"
+    },
+    {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\IMG\\LOGOMENOR.png",
+      "PackagePath": "staticwebassets\\lib\\IMG\\LOGOMENOR.png"
+    },
+    {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\IMG\\LOGOMENOR2.png",
+      "PackagePath": "staticwebassets\\lib\\IMG\\LOGOMENOR2.png"
+    },
+    {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\IMG\\LUPA PRECISO PRO.png",
+      "PackagePath": "staticwebassets\\lib\\IMG\\LUPA PRECISO PRO.png"
+    },
+    {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\IMG\\PRECISO LUPA.png",
+      "PackagePath": "staticwebassets\\lib\\IMG\\PRECISO LUPA.png"
+    },
+    {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\IMG\\USUARIO.png",
+      "PackagePath": "staticwebassets\\lib\\IMG\\USUARIO.png"
+    },
+    {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\IMG\\USUARIO2.png",
+      "PackagePath": "staticwebassets\\lib\\IMG\\USUARIO2.png"
     },
     {
       "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -375,6 +415,10 @@
     {
       "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\bootstrap\\dist\\js\\sidebar.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\sidebar.js"
     },
     {
       "Id": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

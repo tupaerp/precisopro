@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrecisoPRO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f42e8fd109c2aed4056d2956395539727063534")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a50aa69bc6326e2eaf71604948b0a2fa8be3206")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrecisoPRO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrecisoPRO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
