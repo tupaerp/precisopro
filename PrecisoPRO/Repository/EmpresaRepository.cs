@@ -53,6 +53,7 @@ namespace PrecisoPRO.Repository
 
         public bool Save()
         {
+            //to-do - confirmar com senha
             var saved = db.SaveChanges();
             return saved > 0;
         }

@@ -1,19 +1,99 @@
-﻿@model IEnumerable<Empresa>
+﻿@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using X.PagedList
+@model X.PagedList.IPagedList<Empresa>
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-header">
-                    NAVEGAR
+        <div class="col-md-12">
+            <div class="card align-middle">
+                <div class="card-header align-items-center">
+                    <span class="fs-5 fw-bolder text-black opacity-75">Cadastro de Empresas  - REGISTROS</span>
+                    <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Novo Registro" class="btn btn-outline-primary align-middle float-md-end"><i class="fa-solid fs-6 fa-plus"></i></button>
+                    
                 </div>
                 <div class="card-body">
-                 NAVEGAÇÃO
+                 <!--linha para busca-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--campos-->
+                            <div class="row p-1">
+                                <div class="col-md-4">
+                                    <label for="razao" class="form-label">Razão</label>
+                                    <input type="text" class="form-control" id="razao">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="fantasia" class="form-label">Fantasia</label>
+                                    <input type="text" class="form-control" id="fantasia">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="fantasia" class="form-label">Cidade</label>
+                                    <input type="text" class="form-control" id="fantasia">
+                                </div>
+                                                            
+                                <div class="col-md-2">
+                                    <label for="inputState" class="form-label">Estado</label>
+                                    <select id="inputState" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>TO</option>
+                                        <option>GO</option>
+                                        <option>MA</option>
+                                    </select>
+                                </div>
+                                
+                              
+                            </div>
+                            <!--botões-->
+                            <div class="row p-1">
+                                <div class="col-md-12">
+                                    <button type="submit"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buscar" class="btn btn-outline-primary align-middle float-md-end me-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Baixar" class="btn btn-outline-secondary align-middle float-md-end me-2"> <i class="fa-solid fa-download"></i></button>
+                                 
+                                </div>
+                            </div>
+
+
+
+                        </div><!--fim linha busca-->
+                    </div>
+                <!--Linha para tabela-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <partial name="_TabelaPrincipal" />
+                        </div>
+                    </div> <!--fim linha tabela-->
+                </div>
+                <!--Botoes-->
+                <div class="card-footer ">
+                    <div class="container ">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+
+                                <span> Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount</span>
+
+                            </div>
+                            <div class="col-6">
+                                <span style="float:right;">
+                                    @Html.PagedListPager(Model,
+                                             numPagina => Url.Action("Index", new
+                                             {
+                                                 numPagina
+                                             }),
+                                             new PagedListRenderOptions()
+                                    {
+                                        LiElementClasses = new List<string> { "page-item" }
+                                    }
+                                             )
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -21,68 +101,5 @@
 
     </div>
 
-    <div class="row">
-        <div class="col-lg-12">
-            <!--CARD PARA DADOS-->
-            <div class="card">
-                <div class="card-header">
-                    Dados
-                </div>
-                <div class="card-body">
-                    <!--aqui vai a table (PARTIAL)-->
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Descricao</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model)
-                            {
-                                <tr>
-                                    <td>@item.Id</td>
-                                    <td>@item.Razao</td>
-                                    <td>@item.Status</td>
-
-
-                                    <td class="prn-border-table" style="text-align: center;">
-                                        <button data-toggle="tooltip" data-placement="left" data-title="Alterar Registro" style="border:none;" class="prn-button-sem" data-value="@item.Id" onclick="chamarEdit(@item.Id,false)"><i class="prn-font-icones fas fa-edit p-1"></i></button>
-
-
-                                        <button data-toggle="tooltip" data-placement="left" data-title="Visualizar Registro" style="border:none;" class="prn-button-sem" data-value="@item.Id" onclick="chamarDetails(@item.Id,false)"><i class="prn-font-icones fas fa-eye p-1"></i> </button>
-
-
-                                        <button data-toggle="tooltip" data-placement="left" data-title="Apagar Registro" style="border:none;" class="prn-button-sem" data-value="@item.Id" onclick="chamarDelete(@item.Id,false)"><i class="prn-font-icones fas fa-trash-alt p-1"></i> </button>
-
-
-                                    </td>
-
-
-
-                                </tr>
-
-
-                            }
-
-
-
-
-                        </tbody>
-                    </table>
-
-
-
-
-
-                </div>
-                <div class="card-footer">
-                    Card footer
-                </div>
-            </div>
-        </div>
-
-
+  
     </div>
