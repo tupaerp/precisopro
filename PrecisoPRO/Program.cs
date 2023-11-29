@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+builder.Services.AddScoped<IEstadoRepository, EstadoRepository>();
 
 
 builder.Services.AddScoped<IPhotoService, PhotoService>();

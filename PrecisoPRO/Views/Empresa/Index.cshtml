@@ -13,56 +13,122 @@
             <div class="card align-middle">
                 <div class="card-header align-items-center">
                     <span class="fs-5 fw-bolder text-black opacity-75">Cadastro de Empresas  - REGISTROS</span>
-                    <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Novo Registro" class="btn btn-outline-primary align-middle float-md-end"><i class="fa-solid fs-6 fa-plus"></i></button>
-                    
+
                 </div>
                 <div class="card-body">
-                 <!--linha para busca-->
-                    <div class="row">
-                        <div class="col-md-12">
+                    <!--linha para busca-->
+                    <div class="row border-bottom py-2">
+                        <form  asp-controller="Empresa" asp-action="index" class="col-md-12">
                             <!--campos-->
-                            <div class="row p-1">
-                                <div class="col-md-4">
+                            <div class="row g-2">
+                                <div class="col-md-3">
+                                    <label for="razao" class="form-label">CNPJ</label>
+                                    @if (ViewBag.Cnpj == null)
+                                    {
+                                        @Html.TextBox("cnpj", null, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite o CNPJ" })
+                                    }
+                                    else
+                                    {
+                                        @Html.TextBox("cnpj", (string)ViewBag.Cnpj, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite o CNPJ" })
+                                    }
+
+
+
+
+                                </div>
+                                <div class="col-md-6">
                                     <label for="razao" class="form-label">Razão</label>
-                                    <input type="text" class="form-control" id="razao">
+                                    @if(ViewBag.Razao == null)
+                                    {
+                                        @Html.TextBox("razao", null, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite a Razão Social" })
+                                    }
+                                    else
+                                    {
+                                    @Html.TextBox("razao", (string)ViewBag.Razao, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite a Razão Social" })
+                                    }
+ 
+               
+               
+
                                 </div>
                                 <div class="col-md-3">
                                     <label for="fantasia" class="form-label">Fantasia</label>
-                                    <input type="text" class="form-control" id="fantasia">
+                                    @if (ViewBag.Fantasia == null)
+                                    {
+                                        @Html.TextBox("fantasia", null, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite a Fantasia" })
+                                    }
+                                    else
+                                    {
+                                        @Html.TextBox("fantasia", (string)ViewBag.Fantasia, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite a Fantasia" })
+                                    }
+                                  @*   <input type="text" class="form-control" id="fantasia" name="fantasia"> *@
                                 </div>
-                                <div class="col-md-3">
+                               
+
+
+                            </div>
+                            <div class="row g-2 align-items-center mt-1">
+                                <div class="col-md-4">
                                     <label for="fantasia" class="form-label">Cidade</label>
-                                    <input type="text" class="form-control" id="fantasia">
+                                    @*  <input type="text" class="form-control" id="cidade" name="cidade"> *@
+                                    @if (ViewBag.Cidade == null)
+                                    {
+                                        @Html.TextBox("cidade", null, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite a Cidade" })
+                                    }
+                                    else
+                                    {
+                                        @Html.TextBox("cidade", (string)ViewBag.Cidade, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite a Cidade" })
+                                    }
                                 </div>
-                                                            
+
                                 <div class="col-md-2">
                                     <label for="inputState" class="form-label">Estado</label>
-                                    <select id="inputState" class="form-select">
-                                        <option selected>Choose...</option>
-                                        <option>TO</option>
-                                        <option>GO</option>
-                                        <option>MA</option>
+                                    <select class="form-select" name="estado" id="estado">
+                                        <option value="">Escolha a UF</option>
+                                        @foreach (var item in ViewBag.Estados)
+                                        {
+                                            if (item.Uf == ViewBag.Estado)
+                                            {
+                                                <option selected value="@item.Uf">@item.Uf</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@item.Uf">@item.Uf</option>
+                                            }
+                                        }
                                     </select>
+@*                                     @Html.DropDownList("estado", new SelectList(ViewBag.Estados, "Id", "Descricao"), "UF", new { @class = "form-select dropdown" })
+ *@ 
+                                    
                                 </div>
-                                
-                              
-                            </div>
-                            <!--botões-->
-                            <div class="row p-1">
-                                <div class="col-md-12">
-                                    <button type="submit"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buscar" class="btn btn-outline-primary align-middle float-md-end me-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <div class="col-md-6">
+                                    <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Novo Registro" class="btn btn-outline-success align-middle float-lg-end me-2"><i class="fa-solid fs-6 fa-plus"></i></button>
+                                    <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buscar" class="btn btn-outline-primary align-middle float-md-end me-2"><i class="fa-solid fa-magnifying-glass"></i></button>
                                     <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Baixar" class="btn btn-outline-secondary align-middle float-md-end me-2"> <i class="fa-solid fa-download"></i></button>
-                                 
+                                    <a onclick="limparInputs()" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Limpar" class="btn btn-outline-warning align-middle float-md-end me-2"><i class="fa-solid fa-broom"></i></a>
+
                                 </div>
+
                             </div>
 
+                            @* <!--botões-->
+                            <div class="row mt-1 mb-1 p-1">
+                                <div class="col-md-12">
+                                    <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Novo Registro" class="btn btn-outline-success align-middle float-lg-end me-2"><i class="fa-solid fs-6 fa-plus"></i></button>
+                                    <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buscar" class="btn btn-outline-primary align-middle float-md-end me-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Baixar" class="btn btn-outline-secondary align-middle float-md-end me-2"> <i class="fa-solid fa-download"></i></button>
+                                    <a  onclick="limparInputs()" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Limpar" class="btn btn-outline-warning align-middle float-md-end me-2"><i class="fa-solid fa-broom"></i></a>
+
+                                </div>
+                            </div> *@
 
 
-                        </div><!--fim linha busca-->
+
+                        </form><!--fim linha busca-->
                     </div>
-                <!--Linha para tabela-->
-                    <div class="row">
-                        <div class="col-md-12">
+                    <!--Linha para tabela-->
+                    <div class="row mt-2">
+                        <div class="col-md-12 table-responsive">
                             <partial name="_TabelaPrincipal" />
                         </div>
                     </div> <!--fim linha tabela-->
@@ -73,7 +139,7 @@
                         <div class="row align-items-center">
                             <div class="col-6">
 
-                                <span> Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount</span>
+                                <span> Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount - Total de registros: @Model.TotalItemCount</span>
 
                             </div>
                             <div class="col-6">
@@ -81,7 +147,11 @@
                                     @Html.PagedListPager(Model,
                                              numPagina => Url.Action("Index", new
                                              {
-                                                 numPagina
+                                                 numPagina,
+                                                 razao = ViewBag.Razao,
+                                                 cidade = ViewBag.Cidade,
+                                                 fantasia = ViewBag.Fantasia,
+                                                 estado = ViewBag.Estado
                                              }),
                                              new PagedListRenderOptions()
                                     {
@@ -101,5 +171,5 @@
 
     </div>
 
-  
-    </div>
+
+</div>

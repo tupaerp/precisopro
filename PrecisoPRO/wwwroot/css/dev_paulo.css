@@ -37,3 +37,11 @@
     background-color: steelblue;
     color: #fff !important;
 }
+/*REPONSIVIDADE DA TABELA*/
+/* para colunas das tabelas: tira as colunas de acordo com a resulução da tela*/
+/*telas abaixo de 650 as colunas que estiverem com essa classe: prn-tb-reps serão removidas*/
+@media screen and (max-width:650px) {
+    .prn-tb-resp {
+        display: none;
+    }
+}
