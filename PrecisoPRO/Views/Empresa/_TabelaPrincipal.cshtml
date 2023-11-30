@@ -2,10 +2,11 @@
     <thead class="table-dark">
         <tr>
             <th class="text-center border-end fw-light" scope="col">Id</th>
+            <th class="text-center border-end fw-light" scope="col">CNPJ</th>
             <th class="text-center border-end fw-light" scope="col">Razão</th>
-            <th class="text-center border-end fw-light" scope="col">Fantasia</th>
-            <th class="text-center border-end fw-light" scope="col">Cidade</th>
-            <th class="text-center border-end fw-light" scope="col">Estado</th>
+            <th class="text-center border-end fw-light prn-tb-resp" scope="col">Fantasia</th>
+            <th class="text-center border-end fw-light prn-tb-resp" scope="col">Cidade</th>
+            <th class="text-center border-end fw-light prn-tb-resp" scope="col">Estado</th>
             <th class="text-center border-end fw-light" scope="col">Ativo</th>
             <th class="text-center border-end fw-light" scope="col">Ações</th>
         </tr>
@@ -14,12 +15,13 @@
 
         @foreach (var item in Model)
         {
-            <tr>
+            <tr class="prn-resp-td">
                 <td class="border-end">@item.Id</td>
+                <td class="border-end ">@item.Cnpj</td>
                 <td class="border-end">@item.Razao</td>
-                <td class="border-end">@item.Fantasia</td>
-                <td class="border-end">@item.Cidade</td>
-                <td class="border-end text-center">@item.UF</td>
+                <td class="border-end prn-tb-resp">@item.Fantasia</td>
+                <td class="border-end prn-tb-resp">@item.Cidade</td>
+                <td class="border-end text-center prn-tb-resp">@item.UF</td>
                 @if(item.Status == 1)
                 {
                     <td class="text-center text-info-emphasis fw-bold border-end">
@@ -37,9 +39,9 @@
                 }
               
                 <td class="prn-border-table text-center">
-                    <button data-toggle="tooltip" data-placement="left" data-title="Alterar Registro" class="btn btn-outline-primary border-0" data-value="@item.Id" onclick="chamarEdit(@item.Id,false)"><i class="fas fa-edit fs-5"></i></button>
-                    <button data-toggle="tooltip" data-placement="left" data-title="Visualizar Registro" class="btn btn-outline-success border-0" data-value="@item.Id" onclick="chamarDetails(@item.Id,false)"><i class="fas fa-eye fs-5"></i> </button>
-                    <button data-toggle="tooltip" data-placement="left" data-title="Apagar Registro" class="btn btn-outline-danger border-0" data-value="@item.Id" onclick="chamarDelete(@item.Id,false)"><i class="fas fa-trash-alt fs-5"></i> </button>
+                    <button data-toggle="tooltip" data-placement="left" data-title="Alterar Registro" class="btn btn-outline-primary border-0" data-value="@item.Id" onclick="chamarEdit(@item.Id,false)"><i class="fas fa-edit"></i></button>
+                    <button data-toggle="tooltip" data-placement="left" data-title="Visualizar Registro" class="btn btn-outline-success border-0" data-value="@item.Id" onclick="chamarDetails(@item.Id,false)"><i class="fas fa-eye"></i> </button>
+                    <button data-toggle="tooltip" data-placement="left" data-title="Apagar Registro" class="btn btn-outline-danger border-0" data-value="@item.Id" onclick="chamarDelete(@item.Id,false)"><i class="fas fa-trash-alt"></i> </button>
                 </td>
 
 
@@ -54,3 +56,4 @@
 
     </tbody>
 </table>
+
