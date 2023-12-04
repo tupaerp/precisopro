@@ -39,6 +39,7 @@ $(document).ready(function () {
     $("#ncm").mask("9999.99.99");
     $(".decimal").mask("9999,999");
     $(".pr-aliq").mask("9999.999");
+
 });
 jQuery(function ($) {
     $("#campoData").mask("99/99/9999");
