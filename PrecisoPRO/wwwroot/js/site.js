@@ -1,4 +1,4 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
@@ -13,15 +13,15 @@ function maiuscula(z) {
 function limparInputs() {
     // Obtém todos os elementos de entrada (inputs) usando document.querySelectorAll
     var inputs = document.querySelectorAll('input');
-    var selects = document.getElementById('estado');
+   
    
     // Itera sobre os elementos e define o valor de cada input como uma string vazia
     inputs.forEach(function (input) {
         input.value = '';
     });
 
-    var novoOption = selects.options[0];
-    novoOption.value = 'Escolha a UF';
+    var valor = "";
+    document.getElementById('estado').value = valor;
 }
 
 //mascaras
@@ -45,3 +45,17 @@ jQuery(function ($) {
     $("#campoTelefone").mask("(999) 999-9999");
 
 });
+function chamarIncluir() {
+
+    var cont = document.querySelector(".pro-titulo"); //pega o titulo
+
+    var controller = cont.innerText;
+
+  
+
+    $("#modal").load("/" + controller + "/Incluir/", function () {
+
+        $('#modal').modal("show");
+
+    });
+}
