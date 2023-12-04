@@ -1,4 +1,4 @@
-// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
@@ -39,6 +39,7 @@ $(document).ready(function () {
     $("#ncm").mask("9999.99.99");
     $(".decimal").mask("9999,999");
     $(".pr-aliq").mask("9999.999");
+
 });
 jQuery(function ($) {
     $("#campoData").mask("99/99/9999");
