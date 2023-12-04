@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HBIK9lmyzAkDJ1yqmUgwFndQMYdHySNpNG2G1r8iBhWA+o3P4plmPRymZkBxgkcvpJ/YJe+2OCF+cKCLxM7glA==",
+  "dgSpecHash": "ot/zPV3xWc335ykR8z9VClHrISwNfNy9PLwShuA5BXtk43hwkloLlfIQL1LXPbcVTRgTv0qTHmr6SRPJHh6LvQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\PRECISO\\source\\repos\\tupaerp\\precisopro\\PrecisoPRO\\PrecisoPRO.csproj",
   "expectedPackageFiles": [
@@ -121,6 +121,7 @@
     "C:\\Users\\PRECISO\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\PRECISO\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\7.0.11\\microsoft.visualstudio.web.codegeneration.7.0.11.nupkg.sha512",
     "C:\\Users\\PRECISO\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\7.0.11\\microsoft.visualstudio.web.codegeneration.core.7.0.11.nupkg.sha512",
+    "C:\\Users\\PRECISO\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\7.0.11\\microsoft.visualstudio.web.codegeneration.design.7.0.11.nupkg.sha512",
     "C:\\Users\\PRECISO\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.entityframeworkcore\\7.0.11\\microsoft.visualstudio.web.codegeneration.entityframeworkcore.7.0.11.nupkg.sha512",
     "C:\\Users\\PRECISO\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\7.0.11\\microsoft.visualstudio.web.codegeneration.templating.7.0.11.nupkg.sha512",
     "C:\\Users\\PRECISO\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\7.0.11\\microsoft.visualstudio.web.codegeneration.utils.7.0.11.nupkg.sha512",
