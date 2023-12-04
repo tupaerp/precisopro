@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using X.PagedList;
 using PrecisoPRO.Interfaces;
 using PrecisoPRO.Models;
-using PrecisoPRO.Services;
-using PrecisoPRO.Data;
-using Microsoft.EntityFrameworkCore;
+using X.PagedList;
 
 namespace PrecisoPRO.Controllers
 {
@@ -21,7 +18,7 @@ namespace PrecisoPRO.Controllers
             _empresaRepository = empresaRepository;
             _estadoRepository = estadoRepository;
                                    
-        }
+        }   
         public async Task<IActionResult> Index(string cnpj, string razao, string cidade, string fantasia, string estado, int numPagina = 1) 
         {
             this.listaEmpresas = await _empresaRepository.GetAll();

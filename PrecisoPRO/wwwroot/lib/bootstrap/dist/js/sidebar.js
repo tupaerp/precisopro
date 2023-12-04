@@ -5,9 +5,12 @@
     modeSwitch = body.querySelector(".toggle-switch"),
     modeText = body.querySelector(".mode-text"),
     modeImg = body.querySelector(".mode-img");
+    
 
+toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("hide");
 
-
+})
 
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
@@ -30,7 +33,9 @@ modeSwitch.addEventListener("click", () => {
         
     } else {
         modeText.innerText = "Modo Escuro";
-        modeImg.innerHTML = '<img src="lib/IMG/LOGOMENOR.png" width="190" />';
+        modeImg.innerHTML = '<img src="lib/IMG/logobottom.png" width="190" />';
 
     }
 });
+
+
