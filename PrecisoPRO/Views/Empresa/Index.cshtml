@@ -4,7 +4,7 @@
 @model X.PagedList.IPagedList<Empresa>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Empresa";
 }
 
 <div class="container-fluid">
@@ -97,33 +97,24 @@
                                             }
                                         }
                                     </select>
-@*                                     @Html.DropDownList("estado", new SelectList(ViewBag.Estados, "Id", "Descricao"), "UF", new { @class = "form-select dropdown" })
- *@ 
+
                                     
                                 </div>
-                                <div class="col-md-6">
-                                    <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Novo Registro" class="btn btn-outline-success align-middle float-lg-end me-2"><i class="fa-solid fs-6 fa-plus"></i></button>
-                                    <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buscar" class="btn btn-outline-primary align-middle float-md-end me-2"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                    <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Baixar" class="btn btn-outline-secondary align-middle float-md-end me-2"> <i class="fa-solid fa-download"></i></button>
-                                    <a onclick="limparInputs()" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Limpar" class="btn btn-outline-warning align-middle float-md-end me-2"><i class="fa-solid fa-broom"></i></a>
+                                <div id="botoes-acao" class="col-md-6" style="margin-top:2.5rem !important;">
+                                   
+                                     <div>
+                                          <a onclick="chamarIncluir()" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Novo Registro" class="btn btn-outline-success align-middle float-lg-end me-2"><i class="fa-solid fs-6 fa-plus"></i></a>
+                                           <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buscar" class="btn btn-outline-primary align-middle float-md-end me-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                              <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Baixar" class="btn btn-outline-secondary align-middle float-md-end me-2"> <i class="fa-solid fa-download"></i></button>
+                                             <a onclick="limparInputs()" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Limpar" class="btn btn-outline-warning align-middle float-md-end me-2"><i class="fa-solid fa-broom"></i></a>
 
+                                     </div>
+                                   
                                 </div>
 
                             </div>
 
-                            @* <!--botões-->
-                            <div class="row mt-1 mb-1 p-1">
-                                <div class="col-md-12">
-                                    <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Novo Registro" class="btn btn-outline-success align-middle float-lg-end me-2"><i class="fa-solid fs-6 fa-plus"></i></button>
-                                    <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buscar" class="btn btn-outline-primary align-middle float-md-end me-2"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                    <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Baixar" class="btn btn-outline-secondary align-middle float-md-end me-2"> <i class="fa-solid fa-download"></i></button>
-                                    <a  onclick="limparInputs()" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Limpar" class="btn btn-outline-warning align-middle float-md-end me-2"><i class="fa-solid fa-broom"></i></a>
-
-                                </div>
-                            </div> *@
-
-
-
+                         
                         </form><!--fim linha busca-->
                     </div>
                     <!--Linha para tabela-->
@@ -173,3 +164,12 @@
 
 
 </div>
+
+  <section>
+      <!-- MODAL-->
+      <div class="modal fade" id="modal"   aria-hidden="true">
+        
+      </div>
+  </section>
+ 
+

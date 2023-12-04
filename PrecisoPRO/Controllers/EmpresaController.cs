@@ -62,5 +62,11 @@ namespace PrecisoPRO.Controllers
             //passa inicialmente dois parametros, o numero da pagina e o tamanho da página
             return View(this.listaEmpresas.ToPagedList(numPagina, 8));
         }
+
+        //create
+        public IActionResult Incluir()
+        {
+            return View();
+        }
     }
 }
