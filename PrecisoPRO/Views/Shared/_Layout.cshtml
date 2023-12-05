@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   @*  <title id="titulo" class="pro-titulo">@ViewData["Title"] - PrecisoPRO</title> *@
-   <title id="titulo" class="pro-titulo">@ViewBag.Title</title>
+    @*  <title id="titulo" class="pro-titulo">@ViewData["Title"] - PrecisoPRO</title> *@
+    <title id="titulo" class="pro-titulo">@ViewBag.Title</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <!----======== CSS - PAULO ======== -->
@@ -18,7 +18,9 @@
 
 </head>
 <body>
-    <section class="fixed-top bg-white py-1 " id="Navbartop" @* style="background-color:#A9ABAE" *@>
+
+    <section class="fixed-top bg-white py-1 " id="Navbartop">
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 dropdown-center">
@@ -32,7 +34,6 @@
                             <a class="nav-link text-black dropdown-toggle borderbutton" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
                                 <img src="~/lib/IMG/iníciocinza.png" class="img-fluid py-2" width="30" />
                             </a>
-                            
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Início</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -43,7 +44,9 @@
                         <!----===== DROPDOWN INÍCIO ===== -->
                         <li class="nav-item">
                             <a class="nav-link text-white dropdown-toggle borderbutton" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
-                                <img src="~/lib/IMG/tabelascinza.png" class="img-fluid py-2" width="30"/>
+
+                                <img src="~/lib/IMG/tabelascinza.png" class="img-fluid py-2" width="30" />
+
                             </a>
 
                             <ul class="dropdown-menu">
@@ -88,26 +91,26 @@
                         <!----===== FIM IMAGEM PERFIL ===== -->
 
                         @*<li class="nav-item p-1 text-center">
-                            <a class="nav-link text-white" href="/empresa"><i class='bx bx-bar-chart-alt-2 isize'></i></a>
-                            <span class="text-white fs-6">Tabelas</span>
+                        <a class="nav-link text-white" href="/empresa"><i class='bx bx-bar-chart-alt-2 isize'></i></a>
+                        <span class="text-white fs-6">Tabelas</span>
                         </li>
                         <li class="nav-item p-1 text-center">
-                            <a class="nav-link text-white" href="/empresa"><i class='bx bx-add-to-queue isize'></i></a>
-                            <span class="text-white fs-6">Cadastrar</span>
+                        <a class="nav-link text-white" href="/empresa"><i class='bx bx-add-to-queue isize'></i></a>
+                        <span class="text-white fs-6">Cadastrar</span>
                         </li>
                         <li class="nav-item p-1 text-center">
-                            <a class="nav-link text-white" href="/empresa"><i class='bx bx-add-to-queue isize'></i></a>
-                            <span class="text-white fs-6">Cadastrar</span>
-                        </li>
-                         <li class="nav-item p-4">
-                            <img src="~/lib/IMG/ESTATISTICA.png" class="img-fluid py-2" width="40" />
+                        <a class="nav-link text-white" href="/empresa"><i class='bx bx-add-to-queue isize'></i></a>
+                        <span class="text-white fs-6">Cadastrar</span>
                         </li>
                         <li class="nav-item p-4">
-                            <img src="~/lib/IMG/ADICIONAR.png" class="img-fluid py-1" width="40" />
+                        <img src="~/lib/IMG/ESTATISTICA.png" class="img-fluid py-2" width="40" />
                         </li>
                         <li class="nav-item p-4">
-                            <img src="~/lib/IMG/NOTIFICACAO.png" class="img-fluid" width="40" />
-                        </li> *@
+                        <img src="~/lib/IMG/ADICIONAR.png" class="img-fluid py-1" width="40" />
+                        </li>
+                        <li class="nav-item p-4">
+                        <img src="~/lib/IMG/NOTIFICACAO.png" class="img-fluid" width="40" />*@
+
                     </ul>
 
 
@@ -151,14 +154,18 @@
                     <!----===== FIM TESTE DROPDOWN ===== -->
                     <ul class="menu-links">
                         <li class="nav-link">
-                            <a href="/home">
+
+                            <a href="/home" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Início">
+
                                 <i class='bx bx-home-alt icon'></i>
                                 <span class="text nav-text">Início</span>
                             </a>
                         </li>
 
                         <li class="nav-link">
-                            <a href="/empresa">
+
+                            <a href="/empresa" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Empresa">
+
                                 <i class='bx bx-bar-chart-alt-2 icon'></i>
                                 <span class="text nav-text">Tabelas</span>
                             </a>
@@ -166,13 +173,13 @@
 
 
                         <li class="nav-link">
-                            <a href="#">
+                            <a href="/Usuario" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Usuário">
                                 <i class='bx bx-add-to-queue icon'></i>
                                 <span class="text nav-text">Cadastrar</span>
                             </a>
                         </li>
                         <li class="nav-link">
-                            <a href="#">
+                            <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Notificações">
                                 <i class='bx bx-bell icon'></i>
                                 <span class="text pe-2 nav-text">Notificações</span>
                                 <span class="badge px-2 text-white  badge-pill badge-warning">3</span>
@@ -184,7 +191,9 @@
                 <div class="bottom-content">
                     <ul>
                         <li class="">
-                            <a href="/login">
+
+                            <a href="/login" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Sair">
+
                                 <i class='bx bx-log-out icon'></i>
                                 <span class="text nav-text">Sair</span>
                             </a>
@@ -231,6 +240,34 @@
             // $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
+
+
+    <!----===== FIM ATIVAR DICAS ===== -->
+
+    <!----===== TESTE ===== -->
+    <script>
+        $(function () {
+            // Função para verificar se a barra lateral está fechada
+            function isSidebarClosed() {
+                return $('.sidebar').hasClass('close');
+            }
+
+            // Adiciona um ouvinte de eventos aos elementos com atributo 'data-bs-toggle="tooltip"'
+            $('[data-bs-toggle="tooltip"]').tooltip({
+                // Exibe ou oculta o tooltip com base na condição
+                enabled: isSidebarClosed(),
+            });
+
+            // Adiciona um ouvinte de eventos para ajustar a visibilidade do tooltip ao abrir/fechar a barra lateral
+            $('.toggle').click(function () {
+                const tooltips = $('[data-bs-toggle="tooltip"]').data('bs.tooltip');
+                tooltips.forEach(tooltip => {
+                    tooltip.config.enabled = isSidebarClosed();
+                });
+            });
+        });
+    </script>
+
 
     <!----===== FIM ATIVAR DICAS ===== -->
     <!----===== SCRIPT PARA RESPONSIVIDADE ===== -->

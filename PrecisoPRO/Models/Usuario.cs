@@ -24,20 +24,12 @@ namespace PrecisoPRO.Models
 
         [Display(Name = "Celular")]
         [Column("CELULAR")]
-        public  string? Celular { get; set; }
+        public string? Celular { get; set; }
 
         [Required(ErrorMessage = "O campo SENHA é obrigatório.")]
         [DataType(DataType.Password)]
         [Column("SENHA")]
         public string Senha { get; set; }
-
-
-
-        [Display(Name = "Confirma a Senha")]
-        [Required(ErrorMessage = "Confirmação de  SENHA é obrigatória")]
-        [DataType(DataType.Password)]
-        [Compare("Senha", ErrorMessage = "Senhas não conferem")]
-        public string? ConfirmarSenha { get; set; }
 
         [Display(Name = "E-Mail")]
         [EmailAddress(ErrorMessage = "O campo Email não está em um formato válido.")]
@@ -48,11 +40,12 @@ namespace PrecisoPRO.Models
         [Display(Name = "Empresa")]
         [Required(ErrorMessage = "O campo EMPRESA é obrigatório.")]
         [ForeignKey("Empresa")]
+        [Column("ID_EMPRESA")]
         public int? EmpresaId { get; set; }
 
         public Empresa? Empresa { get; set; }
 
-      
+
         [Display(Name = "Imagem")]
         public string? Imagem { get; set; }
 
