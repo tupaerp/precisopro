@@ -27,3 +27,12 @@ body {
     --bs-modal-width: 3000px !important;
     
 }
+
+
+.fs-7 {
+    font-size: 0.8rem !important;
+}
+
+.fs-8 {
+    font-size: 0.5rem !important;
+}

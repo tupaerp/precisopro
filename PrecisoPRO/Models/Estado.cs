@@ -12,12 +12,12 @@ namespace PrecisoPRO.Models
         public int Id { get; set; }
 
         [Column("ESTADO")]
-        public string Descricao { get; set; }
+        public string? Descricao { get; set; }
 
         [Column("UF")]
-        public string Uf { get; set; }
+        public string? Uf { get; set; }
 
         [Column("BANDEIRA")]
-        public string Bandeira { get; set; }
+        public string? Bandeira { get; set; }
     }
 }

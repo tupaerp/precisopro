@@ -49,48 +49,28 @@
                                 @foreach (var estadoCount in ViewBag.ContagemPorEstado)
                                 {
                                     foreach (var estado in ViewBag.Estados)
-                                    {
-                                        <div class="col-md-2 mb-2">
-                                            <div class="card">
-                                                @if(estadoCount.estado == estado.Uf){
+                                    {@if (estadoCount.Item1 == estado.Uf)
+                                        {
+                                            <div class="col-md-1 mb-2">
+                                                <div class="card">
+
                                                     <img src="@estado.Bandeira" class="card-img-top" alt="...">
-                                                }
+                                                    <div class="card-body">
+                                                        <h4 class="card-title fs-7 fw-medium">@estado.Descricao</h4>
+                                                        <h5 class="card-text fs-8 fw-medium">Qtd. Certidoes: <string>0</string></h5>
+                                                        <h5 class="card-text fs-8 fw-medium">Qtd. Empresas: <string>@estadoCount.Item2</string></h5>
+                                                        <a href="#" class="btn btn-outline-primary">Visualizar</a>
+                                                    </div>
+                                                    
 
-                                                {
-                                                <img src="" class="card-img-top" alt="...">
-                                                }
-
-                                                <div class="card-body">
-                                                    <h4 class="card-title">@estado.Descricao</h4>
-                                                    <h5 class="card-text fs-6 fw-lighter opacite">Qtd. Certidoes: <string>10</string></h5>
-                                                    <h5 class="card-text fs-6 fw-lighter">Qtd. Empresas: <string>8</string></h5>
-                                                    <a href="#" class="btn btn-outline-primary">Visualizar</a>
                                                 </div>
                                             </div>
-                                        </div>
+                                        }
                                     }
-                                   @*  <div class="col-md-2 mb-2">
-                                        <div class="card">
-                                            <img src="~/lib/IMG/AC.png" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h4 class="card-title">ACRE</h4>
-                                                <h5 class="card-text fs-6 fw-lighter opacite">Qtd. Certidoes: <string>10</string></h5>
-                                                <h5 class="card-text fs-6 fw-lighter">Qtd. Empresas: <string>8</string></h5>
-                                                <a href="#" class="btn btn-outline-primary">Visualizar</a>
-                                            </div>
-                                        </div>
-                                    </div> *@
+                                  
                                     
                                 }
                                
-
-
-
-
-                            
-
-
-
                             </div> 
 
 
