@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
 builder.Services.AddScoped<IEstadoRepository, EstadoRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 
 builder.Services.AddScoped<IPhotoService, PhotoService>();
