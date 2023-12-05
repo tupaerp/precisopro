@@ -11,8 +11,7 @@ namespace PrecisoPRO.Interfaces
         Task<Empresa> GetByIdAsyncNoTracking(int id);
         Task<IEnumerable<Empresa>> GetEmpresaByCity(string cidade);
 
-
-      
+        Task<IEnumerable<Empresa>> GetAllAsyncNoTracking();
 
         bool Adicionar(Empresa empresa);
 

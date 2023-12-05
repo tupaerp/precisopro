@@ -1,0 +1,107 @@
+﻿@model IEnumerable<EmpresaEstado>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Cnds";
+}
+<div class="container-fluid">
+   @*  <!--LINHA DO CARD PARA CND FEDRAL-->
+    <div class="row">
+
+    </div>
+
+    <!--LINHA DO CARD PARA CND ESTADUAL-->
+    <div class="row">
+
+    </div> *@
+
+    <div class="card" style="min-height: 95vh;">
+        <div class="card-header">
+           CERTIDÃO NEGATIVAS DE DÉBITOS
+        </div>
+        <div class="card-body">
+            <div class="accordion" id="accordionExample">
+
+                <div class="accordion-item border-bottom border-white">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-primary-subtle bg-opacity-75 text-dark-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            CND's FEDERAIS
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>MOSTRAR TODAS AS CNDS FEDERAIS.</strong>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-primary-subtle bg-opacity-75 text-dark-emphasis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            CND's ESTADUAIS
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           
+                            <div class="row g-2">
+                                @foreach (var estadoCount in ViewBag.ContagemPorEstado)
+                                {
+                                    foreach (var estado in ViewBag.Estados)
+                                    {
+                                        <div class="col-md-2 mb-2">
+                                            <div class="card">
+                                                @if(estadoCount.estado == estado.Uf){
+                                                    <img src="@estado.Bandeira" class="card-img-top" alt="...">
+                                                }
+
+                                                {
+                                                <img src="" class="card-img-top" alt="...">
+                                                }
+
+                                                <div class="card-body">
+                                                    <h4 class="card-title">@estado.Descricao</h4>
+                                                    <h5 class="card-text fs-6 fw-lighter opacite">Qtd. Certidoes: <string>10</string></h5>
+                                                    <h5 class="card-text fs-6 fw-lighter">Qtd. Empresas: <string>8</string></h5>
+                                                    <a href="#" class="btn btn-outline-primary">Visualizar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                   @*  <div class="col-md-2 mb-2">
+                                        <div class="card">
+                                            <img src="~/lib/IMG/AC.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h4 class="card-title">ACRE</h4>
+                                                <h5 class="card-text fs-6 fw-lighter opacite">Qtd. Certidoes: <string>10</string></h5>
+                                                <h5 class="card-text fs-6 fw-lighter">Qtd. Empresas: <string>8</string></h5>
+                                                <a href="#" class="btn btn-outline-primary">Visualizar</a>
+                                            </div>
+                                        </div>
+                                    </div> *@
+                                    
+                                }
+                               
+
+
+
+
+                            
+
+
+
+                            </div> 
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+   
+</div>

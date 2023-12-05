@@ -22,7 +22,7 @@ namespace PrecisoPRO.Repository
 
         public async Task<IEnumerable<Estado>> GetAllAsyncNoTracking()
         {
-            return await db.Estados.AsNoTracking().OrderBy(x => x.Descricao).ToListAsync();
+            return await db.Estados.AsNoTracking().OrderBy(x => x.Id).ToListAsync();
         }
 
        

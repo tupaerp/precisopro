@@ -14,5 +14,7 @@ namespace PrecisoPRO.Data
         public DbSet<Empresa> Empresas { get; set; }
 
         public DbSet<Estado> Estados { get; set; }
+
+        public DbSet<EmpresaEstado> EmpresasEstados { get; set; }
     }
 }

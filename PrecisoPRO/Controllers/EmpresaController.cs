@@ -24,7 +24,7 @@ namespace PrecisoPRO.Controllers
         }   
         public async Task<IActionResult> Index(string cnpj, string razao, string cidade, string fantasia, string estado, int numPagina = 1) 
         {
-            this.listaEmpresas = await _empresaRepository.GetAll();
+            this.listaEmpresas = await _empresaRepository.GetAllAsyncNoTracking();
             this.listaEstados = await _estadoRepository.GetAllAsyncNoTracking();
             if (cnpj != null)
             {

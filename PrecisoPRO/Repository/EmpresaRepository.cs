@@ -34,7 +34,10 @@ namespace PrecisoPRO.Repository
             return await db.Empresas.ToListAsync();
         }
 
-
+        public async Task<IEnumerable<Empresa>> GetAllAsyncNoTracking()
+        {
+            return await db.Empresas.AsNoTracking().OrderBy(x => x.Id).ToListAsync();
+        }
 
         public async Task<Empresa> GetByIdAsync(int id)
         {
