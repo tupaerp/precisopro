@@ -1,95 +1,85 @@
-﻿@model IEnumerable<PrecisoPRO.Models.Usuario>
-
+﻿@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@using X.PagedList
+@model X.PagedList.IPagedList<Usuario>
 @{
-    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+    ViewData["Title"] = "Usuario";
 }
 
-<h1>Index</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card align-middle">
+                <div class="card-header align-items-center">
+                    <span class="fs-5 fw-bolder text-black opacity-75">Cadastro de Usuarios</span>  
+                </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Login)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Celular)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Senha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ConfirmarSenha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Empresa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Imagem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Data_Cad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Data_Alt)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Login)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Celular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Senha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConfirmarSenha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Empresa.Cnpj)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Imagem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Data_Cad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Data_Alt)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                <div class="card-body">
+                    <!--linha para busca-->
+                    <div class="row border-bottom pb-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Buscar por nome">
+                         
+                        </div>
+                        <div id="botoes-acao" class="col-md-6">
+                            <a onclick="chamarIncluir()" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Novo Registro" class="btn btn-outline-success align-middle float-lg-end me-2"><i class="fa-solid fs-6 fa-plus"></i></a>
+                            <button type="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Buscar" class="btn btn-outline-primary align-middle float-md-end me-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+
+                    </div>
+                    <!--Linha para tabela-->
+                    <div class="row mt-2">
+                        <div class="col-md-12 table-responsive">
+                            <partial name="_TabelaPrincipal" />
+                        </div>
+                    </div> <!--fim linha tabela-->
+                </div>
+                <!--Botoes-->
+                <div class="card-footer ">
+                    <div class="container-fluid ">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+
+                                <span> Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount - Total de registros: @Model.TotalItemCount</span>
+
+                            </div>
+                            <div class="col-6">
+                                <span style="float:right;">
+                                    @Html.PagedListPager(Model,
+                                             numPagina => Url.Action("Index", new
+                                             {
+                                                 numPagina,
+                                                 razao = ViewBag.Razao,
+                                                 cidade = ViewBag.Cidade,
+                                                 fantasia = ViewBag.Fantasia,
+                                                 estado = ViewBag.Estado
+                                             }),
+                                             new PagedListRenderOptions()
+                                    {
+                                        LiElementClasses = new List<string> { "page-item" }
+                                    }
+                                             )
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<section>
+    <!-- MODAL-->
+    <div class="modal fade" id="modal" aria-hidden="true">
+    </div>
+</section>
+
+

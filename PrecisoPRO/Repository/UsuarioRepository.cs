@@ -13,53 +13,32 @@ namespace PrecisoPRO.Repository
         {
             db = context;
         }
-        public async Task<IEnumerable<Usuario>> GetAll()
-        {
-            return await db.Usuarios.ToListAsync();
-        }
-        public bool Adicionar(Usuario club)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Add(Usuario usuario)
+        public bool Adicionar(Usuario usuario)
         {
             db.Add(usuario);
             return Save();
         }
-
-      
-
-        public bool Delete(Usuario club)
+        public bool Delete(Usuario usuario)
         {
-            throw new NotImplementedException();
+            db.Remove(usuario);
+            return Save();
         }
-
-        
-
-        public Task<Usuario> GetByIdAsync(int id)
+        public async Task<IEnumerable<Usuario>> GetAll()
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<Usuario> GetByIdAsyncNoTracking(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Usuario>> GetClubByCity(string city)
-        {
-            throw new NotImplementedException();
+            return await db.Usuarios.ToListAsync();
         }
 
         public bool Save()
         {
-            throw new NotImplementedException();
+            //to-do - confirmar com senha
+            var saved = db.SaveChanges();
+            return saved > 0;
         }
 
-        public bool Update(Usuario club)
+        public bool Update(Usuario usuario)
         {
-            throw new NotImplementedException();
+            db.Update(usuario);
+            return Save();
         }
     }
 }

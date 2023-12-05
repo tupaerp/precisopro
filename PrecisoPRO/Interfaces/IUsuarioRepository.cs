@@ -5,21 +5,11 @@ namespace PrecisoPRO.Interfaces
     public interface IUsuarioRepository
     {
         Task<IEnumerable<Usuario>> GetAll();
+        bool Adicionar(Usuario usuario);
 
-        Task<Usuario> GetByIdAsync(int id);
+        bool Update(Usuario usuario);
 
-        Task<Usuario> GetByIdAsyncNoTracking(int id);
-        Task<IEnumerable<Usuario>> GetClubByCity(string city);
-
-
-        bool Add(Usuario club);
-
-        bool Adicionar(Usuario club);
-
-
-        bool Update(Usuario club);
-
-        bool Delete(Usuario club);
+        bool Delete(Usuario usuario);
         bool Save();
     }
 }
