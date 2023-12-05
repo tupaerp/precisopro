@@ -6,6 +6,7 @@ namespace PrecisoPRO.Models
     [Table("ESTADO")]
     public class Estado
     {
+        
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Id")]
         [Column("ID")]

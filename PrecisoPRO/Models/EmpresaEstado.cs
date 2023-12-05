@@ -6,7 +6,7 @@ namespace PrecisoPRO.Models
     [Table("EMPRESA-ESTADO")]
     public class EmpresaEstado
     {
-
+        //CHAVE
         [Key]
         [Column("ID_EMPRESA")]
         public int IdEmpresa { get; set; }
