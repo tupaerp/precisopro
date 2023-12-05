@@ -46,7 +46,7 @@ namespace PrecisoPRO.Repository
             return await db.Empresas.AsNoTracking().FirstOrDefaultAsync(i => i.Id == id);
         }
 
-        public async Task<IEnumerable<Empresa>> GetClubByCity(string cidade)
+        public async Task<IEnumerable<Empresa>> GetEmpresaByCity(string cidade)
         {
             return await db.Empresas.Where(c => c.Cidade.Contains(cidade)).ToListAsync();
         }

@@ -7,8 +7,10 @@ namespace PrecisoPRO.Models.ViewModels
     {
         public int Id { get; set; }
 
+        [Required(ErrorMessage = "O campo RAZÃO é obrigatório.")]
         public required string Razao { get; set; }
 
+        [Required(ErrorMessage = "O campo FANTASIA é obrigatório.")]
         public required string Fantasia { get; set; }
 
         public string? Endereco { get; set; }
@@ -26,16 +28,17 @@ namespace PrecisoPRO.Models.ViewModels
 
         public string? Ie { get; set; }
 
-
+        [Required(ErrorMessage = "O campo CNPJ é obrigatório.")]
         public required string Cnpj { get; set; }
 
 
       
         public string? Celular { get; set; }
+        public string? Telefone { get; set; }
 
-       
+
         public sbyte Status { get; set; }
-
+        public sbyte Principal { get; set; }
         public DateTime? Data_Cad { get; set; }
 
               
