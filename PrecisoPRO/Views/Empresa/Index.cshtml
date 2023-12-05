@@ -17,8 +17,30 @@
 
                 </div>
                 <div class="card-body">
-                    <!--linha para busca-->
+                    <!--LINHA PARA BUSCAS-->
                     <div class="row border-bottom py-2">
+                        <div class="row">
+                            @if (TempData["Error"] != null)
+                            {
+                               
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong><i class="fa-solid fa-xmark fs-4"></i> </strong>  @TempData["Error"]
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+
+                              
+                            }
+                            @if (TempData["Success"] != null)
+                            {
+                               
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong><i class="fa-regular fa-thumbs-up fs-4"></i></strong> @TempData["Success"]
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+
+                                
+                            }
+                        </div>
                         <form  asp-controller="Empresa" asp-action="index" class="col-md-12">
                             <!--campos-->
                             <div class="row g-2">
@@ -62,7 +84,7 @@
                                     {
                                         @Html.TextBox("fantasia", (string)ViewBag.Fantasia, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite a Fantasia" })
                                     }
-                                  @*   <input type="text" class="form-control" id="fantasia" name="fantasia"> *@
+                              
                                 </div>
                                
 
@@ -71,7 +93,7 @@
                             <div class="row g-2 align-items-center mt-1">
                                 <div class="col-md-4">
                                     <label for="fantasia" class="form-label">Cidade</label>
-                                    @*  <input type="text" class="form-control" id="cidade" name="cidade"> *@
+                                  
                                     @if (ViewBag.Cidade == null)
                                     {
                                         @Html.TextBox("cidade", null, new { @class = "form-control", onkeyup = "maiuscula(this);", placeholder = "Digite a Cidade" })
@@ -127,7 +149,7 @@
                 </div>
                 <!--Botoes-->
                 <div class="card-footer ">
-                    <div class="container ">
+                    <div class="container-fluid ">
                         <div class="row align-items-center">
                             <div class="col-6">
 

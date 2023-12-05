@@ -30,8 +30,12 @@ $(document).ready(function () {
     $('.date').mask('99/99/9999');
     $('.time').mask('00:00:00');
     $('#cep').mask('99.999-999');
+    $('#Cep').mask('99.999-999');
     $('.phone').mask('9999-9999');
+    $('.telefone').mask('(63)9999-9999');
+    $('.celular').mask("(99)99999-9999");
     $('#cnpj').mask('99.999.999/9999-99');
+    $('#Cnpj').mask('99.999.999/9999-99');
     $('#telefone').mask('(99)99999-9999');
     $(".senha").mask("xxxxxxxxx");
     $("#cest").mask("99.999.99");
@@ -60,3 +64,14 @@ function chamarIncluir() {
 
     });
 }
+
+//FECHAR O ALERT APOS A MENSAGEM
+$(document).ready(function () {
+    setTimeout(function () {
+        $(".alert").fadeOut("slow", function () {
+
+            $(this).alert('close');
+        });
+
+    }, 5000);
+});

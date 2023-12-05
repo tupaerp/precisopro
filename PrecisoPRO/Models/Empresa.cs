@@ -65,9 +65,17 @@ namespace PrecisoPRO.Models
         [Column("CELULAR")]
         public string? Celular { get; set; }
 
+        [Display(Name = "Telefone")]
+        [Column("TELEFONE")]
+        public string? Telefone { get; set; }
+
         [Display(Name = "Status")]
         [Column("STATUS")]
         public sbyte Status { get; set; }
+
+        [Display(Name = "Principal")]
+        [Column("PRINCIPAL")]
+        public sbyte Principal { get; set; }
 
         [DisplayFormat(DataFormatString = "{MM/dd/yyyy}")]
         [Column("DATA_CAD")]

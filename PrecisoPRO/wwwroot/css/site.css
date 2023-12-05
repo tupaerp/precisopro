@@ -20,3 +20,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.modal
+{
+   
+    --bs-modal-width: 3000px !important;
+    
+}
