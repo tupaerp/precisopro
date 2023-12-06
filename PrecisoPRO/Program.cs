@@ -12,7 +12,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
 builder.Services.AddScoped<IEstadoRepository, EstadoRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-builder.Services.AddScoped <IEmpresaEstadoRepository, EmpresaEstadoRepository>();
+builder.Services.AddScoped<IAssociarEmpUf, AssociarEmpUfRepository>();
+builder.Services.AddScoped<ICndUf, CndUfRepository>();
 
 
 builder.Services.AddScoped<IPhotoService, PhotoService>();

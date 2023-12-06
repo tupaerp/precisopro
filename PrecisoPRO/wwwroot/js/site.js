@@ -32,7 +32,7 @@ $(document).ready(function () {
     $('#cep').mask('99.999-999');
     $('#Cep').mask('99.999-999');
     $('.phone').mask('9999-9999');
-    $('.telefone').mask('(63)9999-9999');
+    $('.telefone').mask('(99)9999-9999');
     $('.celular').mask("(99)99999-9999");
     $('#cnpj').mask('99.999.999/9999-99');
     $('#Cnpj').mask('99.999.999/9999-99');
@@ -59,6 +59,21 @@ function chamarIncluir() {
   
 
     $("#modal").load("/" + controller + "/Incluir/", function () {
+
+        $('#modal').modal("show");
+
+    });
+}
+
+function chamarAssociar() {
+
+    var cont = document.querySelector(".pro-titulo"); //pega o titulo
+
+    var controller = cont.innerText;
+
+
+
+    $("#modal").load("/" + controller + "/AssociarEmpresa/", function () {
 
         $('#modal').modal("show");
 

@@ -1,7 +1,8 @@
-﻿@model IEnumerable<EmpresaEstado>
+﻿@using PrecisoPRO.Models.ViewModels
+@model IEnumerable<CndUfViewModel>
 @{
     Layout = "_Layout";
-    ViewData["Title"] = "Cnds";
+    ViewData["Title"] = "BuscarCNDs";
 }
 <div class="container-fluid">
    @*  <!--LINHA DO CARD PARA CND FEDRAL-->
@@ -44,7 +45,38 @@
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                           
+                            <div class="row">
+                                @if (TempData["Error"] != null)
+                                {
+
+                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        <strong><i class="fa-solid fa-xmark fs-4"></i> </strong>  @TempData["Error"]
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+
+
+                                }
+                                @if (TempData["Success"] != null)
+                                {
+
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong><i class="fa-regular fa-thumbs-up fs-4"></i></strong> @TempData["Success"]
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+
+
+                                }
+                                @if (TempData["Warning"] != null)
+                                {
+
+                                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                        <strong><i class="fa-solid fa-triangle-exclamation fs-4"></i></strong> @TempData["Warning"]
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+
+
+                                }
+                            </div>
                             <div class="row g-2">
                                 @foreach (var estadoCount in ViewBag.ContagemPorEstado)
                                 {
@@ -53,13 +85,15 @@
                                         {
                                             <div class="col-md-1 mb-2">
                                                 <div class="card">
-
-                                                    <img src="@estado.Bandeira" class="card-img-top" alt="...">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title fs-7 fw-medium">@estado.Descricao</h4>
+                                                    <figure>
+                                                        <img src="@estado.Bandeira" class="card-img-top" alt="@estado.Descricao">
+                                                        <figcaption class="mx-1 fs-8">@estado.Descricao</figcaption>
+                                                    </figure>
+                                                   
+                                                    <div class="card-body pt-0">
                                                         <h5 class="card-text fs-8 fw-medium">Qtd. Certidoes: <string>0</string></h5>
                                                         <h5 class="card-text fs-8 fw-medium">Qtd. Empresas: <string>@estadoCount.Item2</string></h5>
-                                                        <a href="#" class="btn btn-outline-primary">Visualizar</a>
+                                                        <a href="#" class="btn btn-outline-primary btn-sm text-center fs-7">VISUALIZAR </a>
                                                     </div>
                                                     
 
@@ -70,8 +104,14 @@
                                   
                                     
                                 }
-                               
+                          
                             </div> 
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a onclick="chamarAssociar()" class="btn btn-outline-success align-middle float-lg-end me-2"><i class="fa-solid fs-6 fa-upload"></i> Associar Empresa</a>
+
+                                </div>
+                            </div>
 
 
 
@@ -85,3 +125,9 @@
     </div>
    
 </div>
+
+<section>
+    <!-- MODAL-->
+    <div class="modal fade" id="modal" aria-hidden="true">
+    </div>
+</section>

@@ -25,6 +25,10 @@ namespace PrecisoPRO.Models.ViewModels
 
         public string? Bairro { get; set; }
 
+       
+        [EmailAddress(ErrorMessage = "O campo Email não está em um formato válido.")]
+        public string? Email { get; set; }
+
 
         public string? Ie { get; set; }
 

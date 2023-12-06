@@ -28,6 +28,11 @@ namespace PrecisoPRO.Models
         [Column("ENDERECO")]
         public  string? Endereco { get; set; }
 
+        [Display(Name = "E-Mail")]
+        [EmailAddress(ErrorMessage = "O campo Email não está em um formato válido.")]
+        [Column("EMAIL")]
+        public  string? Email { get; set; }
+
         [Display(Name = "Número")]
         [Column("NUMERO")]
         public string? Numero { get; set; }

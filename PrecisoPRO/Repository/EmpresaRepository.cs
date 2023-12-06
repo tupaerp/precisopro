@@ -56,14 +56,14 @@ namespace PrecisoPRO.Repository
 
         public bool Save()
         {
-            //to-do - confirmar com senha
+            
             var saved = db.SaveChanges();
             return saved > 0;
         }
 
-        public bool Update(Empresa club)
+        public bool Update(Empresa empresa)
         {
-            db.Update(club);
+            db.Update(empresa);
             return Save();
         }
     }
