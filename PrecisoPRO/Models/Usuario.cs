@@ -46,14 +46,15 @@ namespace PrecisoPRO.Models
         public Empresa? Empresa { get; set; }
 
 
-        [Display(Name = "Imagem")]
-        public string? Imagem { get; set; }
+        //[Display(Name = "Imagem")]
+        //[Column("IMAGEM")]
+        //public string? Imagem { get; set; }
 
 
 
         [Display(Name = "Status")]
         [Column("STATUS")]
-        public sbyte Status { get; set; }
+        public sbyte? Status { get; set; }
 
         [DisplayFormat(DataFormatString = "{MM/dd/yyyy}")]
         [Column("DATA_CAD")]

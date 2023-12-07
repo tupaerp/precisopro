@@ -26,6 +26,7 @@ namespace PrecisoPRO.Controllers
         {
             this.listaEmpresas = await _empresaRepository.GetAllAsyncNoTracking();
             this.listaEstados = await _estadoRepository.GetAllAsyncNoTracking();
+
             if (cnpj != null)
             {
                 this.listaEmpresas = this.listaEmpresas.Where(x => x.Cnpj.Contains(cnpj)).ToList();
