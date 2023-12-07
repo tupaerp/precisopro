@@ -9,10 +9,7 @@ namespace PrecisoPRO.Interfaces
         Task<Empresa> GetByIdAsync(int id);
 
         Task<Empresa> GetByIdAsyncNoTracking(int id);
-        Task<IEnumerable<Empresa>> GetEmpresaByCity(string cidade);
-
-
-      
+        Task<IEnumerable<Empresa>> GetClubByCity(string cidade);
 
         bool Adicionar(Empresa empresa);
 
@@ -21,5 +18,6 @@ namespace PrecisoPRO.Interfaces
 
         bool Delete(Empresa empresa);
         bool Save();
+        
     }
 }

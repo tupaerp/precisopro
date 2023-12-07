@@ -34,7 +34,12 @@ namespace PrecisoPRO.Repository
             return await db.Empresas.ToListAsync();
         }
 
+     
 
+        //public Task<IEnumerable<Empresa>?> GetAllAsyncNoTracking()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public async Task<Empresa> GetByIdAsync(int id)
         {
@@ -44,6 +49,11 @@ namespace PrecisoPRO.Repository
         public async Task<Empresa> GetByIdAsyncNoTracking(int id)
         {
             return await db.Empresas.AsNoTracking().FirstOrDefaultAsync(i => i.Id == id);
+        }
+
+        public Task<IEnumerable<Empresa>> GetClubByCity(string cidade)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<Empresa>> GetEmpresaByCity(string cidade)
