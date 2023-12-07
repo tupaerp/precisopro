@@ -1,4 +1,5 @@
-﻿<table class="table table-sm table-striped table-responsive table-hover align-items-center">
+﻿﻿
+<table class="table table-sm table-striped table-responsive table-hover align-items-center">
     <thead class="table-dark">
         <tr>
             <th class="text-center border-end fw-light" scope="col">Id</th>
@@ -19,22 +20,22 @@
                 <td class="border-end text-center">@item.Nome</td>
                 <td class="border-end text-center">@item.Login</td>
                 <td class="border-end text-center">@item.Email</td>
-                @if(item.Status == 1)
+                @if (item.Status == 1)
                 {
                     <td class="text-center text-info-emphasis fw-bold border-end">
-                       @*  <i class="fa-solid fa-face-smile fs-6 "></i> *@
+                        @*  <i class="fa-solid fa-face-smile fs-6 "></i> *@
                         <i class="fa-solid fa-check fs-5"></i>
                     </td>
                 }
                 else
                 {
                     <td class="text-center text-danger-emphasis border-end fw-bold">
-                      
+
                         <i class="fa-solid fs-5 fa-xmark"></i>
-                        
+
                     </td>
                 }
-              
+
                 <td class="prn-border-table text-center">
                     <button data-toggle="tooltip" data-placement="left" data-title="Alterar Registro" class="btn btn-outline-primary border-0" data-value="@item.Id" onclick="chamarEdit(@item.Id,false)"><i class="fas fa-edit"></i></button>
                     <button data-toggle="tooltip" data-placement="left" data-title="Visualizar Registro" class="btn btn-outline-success border-0" data-value="@item.Id" onclick="chamarDetails(@item.Id,false)"><i class="fas fa-eye"></i> </button>
@@ -53,4 +54,3 @@
 
     </tbody>
 </table>
-
