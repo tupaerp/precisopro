@@ -34,12 +34,14 @@ namespace PrecisoPRO.Repository
             return await db.Empresas.ToListAsync();
         }
 
+
      
 
         //public Task<IEnumerable<Empresa>?> GetAllAsyncNoTracking()
         //{
         //    throw new NotImplementedException();
         //}
+
 
         public async Task<Empresa> GetByIdAsync(int id)
         {
